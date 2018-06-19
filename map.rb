@@ -3,10 +3,7 @@ require_relative 'customer'
 require_relative 'driver'
 
 class Map
-  @customer
-  @drivers
-  @occupied
-  @size
+
   def initialize
     @size = 20
     @drivers = []
@@ -35,6 +32,3 @@ class Map
     end
   end
 end
-
-map = Map.new()
-map.show_map
