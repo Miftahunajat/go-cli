@@ -27,11 +27,14 @@ class GoCli
           opt = gets.chomp.to_i
         when 3
           view_history
+          puts "Please select other action"
+          print "Your choice [1..4] : "
+          opt = gets.chomp.to_i
         when 4
 
         else
-          puts "Cannot understand your meaning", "Please select your choice [1..4] : "
-          gets.chomp.to_i
+          print "Cannot understand your meaning", "Please select your choice [1..4] : "
+          opt = gets.chomp.to_i
       end
     end
 
@@ -43,7 +46,7 @@ class GoCli
     end
 
     def order_go_ride
-      print "Enter your destination (separate with spaces) (rows,cols) : "
+      print "Enter your destination (separate with spaces) (rows cols) : "
       a = STDIN.gets.chomp.to_s
       arr = a.split().map {|x| x[/\d+/]}.collect {|x| x.to_i}
       totalPrice = @map.get_distance_from_customer(*arr[0..1])*@price
@@ -52,19 +55,39 @@ class GoCli
       puts "\n================","================\n"
       puts "Driver Name: ", "#{driver.name}\n"
       puts "Route : ", "Sebuah Rute\n"
-      puts "Price : ", "Rp #{@price*@map.get_distance_from_customer(*arr)}\n"
+      puts "Price : ", "Rp #{totalPrice}\n"
       print "Confirm ? (y/n) : "
       answer = gets.chomp.to_s
-      ride_user(*arr) if answer.match?(/[1y](?:es)?/i)
+      if answer.match?(/[1y](?:es)?/i)
+        write_history(driver.name, @map.customer.get_loc,arr,totalPrice)
+        ride_user(*arr)
+      end
+
     end
 
     def view_history
-
+      puts "Viewing history . . . . . . .\n\n\n"
+      input = IO.read("database")
+      puts input
+      put "\n\n"
     end
 
     def ride_user x,y
       @map.move_customer(x,y)
       puts "Anda sudah sampai tujuan"
+    end
+
+    def write_history (driver_name, start, destination, price)
+      output = File.open("database","a+")
+      output << "\n==============\n"
+      output << "Driver : #{driver_name}\n"
+      output << "Start : #{start[0]}, #{start[1]}\n"
+      output << "Destination : #{destination[0]}, #{destination[1]}\n"
+      output << "Route : \n"
+      output << "Showing route\n"
+      output << "Price : Rp. #{price}\n"
+      output << "==============\n\n"
+      output.close
     end
 end
 

@@ -4,16 +4,19 @@ require_relative 'driver'
 
 class Map
 
+  attr_accessor :customer
+
   def initialize
     @size = 20
+    @drivers_name = ["ali", "kojek", "rahul", "micky", "bonbon", "peeman", "theo"]
     @drivers = []
     @occupied = Hash.new
     visited = Util.getRandomCoordinate(@size)
     @customer = Customer.new(*visited)
     @occupied[visited] = @customer
-    5.times do
+    5.times do |i|
       visited = Util.getRandomCoordinate(@size) until !@occupied[visited]
-      @drivers << (@occupied[visited] = Driver.new("Ali",*visited) if !@occupied[visited])
+      @drivers << (@occupied[visited] = Driver.new(@drivers_name[i],*visited) if !@occupied[visited])
     end
   end
 
@@ -46,5 +49,7 @@ class Map
     @customer.move(x,y)
     @occupied[@customer.get_loc] = @customer
   end
+
+
   
 end
