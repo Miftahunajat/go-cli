@@ -50,6 +50,16 @@ class Map
     @occupied[@customer.get_loc] = @customer
   end
 
-
-  
+  def get_route (finish, start = @customer.get_loc)
+    route = ''
+    route << "start at (#{start[0]},#{start[1]})\n"
+    if finish[0] != start[0]
+      route << "go to (#{finish[0]},#{start[1]})\n"
+    elsif finish[1] != start[1]
+    end
+    (((finish[0] - start[0]) * (finish[1] - start[1])) > 0) ? route << "turn left\n" : route << "turn right\n" if start[0] != finish[0] && start[1] != finish[1]
+    route << "go to (#{finish[0]},#{finish[1]})\n"
+    route << "finish at (#{finish[0]},#{finish[1]})\n"
+    route
+  end
 end

@@ -2,10 +2,11 @@ require_relative 'map'
 
 class GoCli
 
+  attr_accessor :price
+
 
   def initialize
     @map = Map.new
-    @price = 200
   end
 
   def main
@@ -49,12 +50,13 @@ class GoCli
       print "Enter your destination (separate with spaces) (rows cols) : "
       a = STDIN.gets.chomp.to_s
       arr = a.split().map {|x| x[/\d+/]}.collect {|x| x.to_i}
-      totalPrice = @map.get_distance_from_customer(*arr[0..1])*@price
+      totalPrice = @map.get_distance_from_customer(*arr[0..1])*get_price
       driver = @map.get_nearest_driver
 
       puts "\n================","================\n"
       puts "Driver Name: ", "#{driver.name}\n"
-      puts "Route : ", "Sebuah Rute\n"
+      puts "Route : \n"
+      puts @map.get_route(arr)
       puts "Price : ", "Rp #{totalPrice}\n"
       print "Confirm ? (y/n) : "
       answer = gets.chomp.to_s
@@ -74,7 +76,7 @@ class GoCli
 
     def ride_user x,y
       @map.move_customer(x,y)
-      puts "Anda sudah sampai tujuan"
+      puts "You have already reached your destination"
     end
 
     def write_history (driver_name, start, destination, price)
@@ -84,10 +86,16 @@ class GoCli
       output << "Start : #{start[0]}, #{start[1]}\n"
       output << "Destination : #{destination[0]}, #{destination[1]}\n"
       output << "Route : \n"
-      output << "Showing route\n"
+      output << "#{@map.get_route(destination,start)}\n"
       output << "Price : Rp. #{price}\n"
       output << "==============\n\n"
       output.close
+    end
+
+    #default price
+    def get_price
+      price = 200
+      price
     end
 end
 

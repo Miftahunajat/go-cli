@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cb6fda8c-2a9f-46ba-bbdc-6a703ae6c83f" name="Default" comment="init project">
+      <change beforePath="$PROJECT_DIR$/database" beforeDir="false" afterPath="$PROJECT_DIR$/database" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go-cli.rb" beforeDir="false" afterPath="$PROJECT_DIR$/go-cli.rb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/map.rb" beforeDir="false" afterPath="$PROJECT_DIR$/map.rb" afterDir="false" />
     </list>
@@ -19,8 +20,8 @@
     <SUITE FILE_PATH="coverage/go_cli@People_calculateDistance_return_distance_between_2_object__go_cli.rcov" NAME="People#calculateDistance return distance between 2 object: go-cli Coverage Results" MODIFIED="1529398520027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="go-cli" />
     <SUITE FILE_PATH="coverage/go_cli@Run_spec__people_spec___go_cli.rcov" NAME="Run spec 'people_spec': go-cli Coverage Results" MODIFIED="1529401461845" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="go-cli" />
     <SUITE FILE_PATH="coverage/go_cli@map.rcov" NAME="map Coverage Results" MODIFIED="1529500498038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="go-cli" />
-    <SUITE FILE_PATH="coverage/go_cli@go_cli.rcov" NAME="go-cli Coverage Results" MODIFIED="1529509470502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="go-cli" />
-    <SUITE FILE_PATH="coverage/go_cli@_calculateCustomerAndDriver_return_distance_between_customer_and_driver__go_cli.rcov" NAME="#calculateCustomerAndDriver return distance between customer and driver: go-cli Coverage Results" MODIFIED="1529401484378" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="go-cli" />
+    <SUITE FILE_PATH="coverage/go_cli@go_cli.rcov" NAME="go-cli Coverage Results" MODIFIED="1529514745119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="go-cli" />
+    <SUITE FILE_PATH="coverage/go_cli@_calculateCustomerAndDriver_return_distance_between_customer_and_driver__go_cli.rcov" NAME="#calculateCustomerAndDriver return distance between customer and driver: go-cli Coverage Results" MODIFIED="1529514370910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="go-cli" />
     <SUITE FILE_PATH="coverage/go_cli@customer.rcov" NAME="customer Coverage Results" MODIFIED="1529401209431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="go-cli" />
     <SUITE FILE_PATH="coverage/go_cli@util.rcov" NAME="util Coverage Results" MODIFIED="1529406703231" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="rcov" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" MODULE_NAME="go-cli" />
   </component>
@@ -29,8 +30,8 @@
       <file leaf-file-name="people_spec.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/people_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            <state relative-caret-position="137">
+              <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
             </state>
           </provider>
         </entry>
@@ -65,8 +66,8 @@
       <file leaf-file-name="map.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/map.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            <state relative-caret-position="117">
+              <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
             </state>
           </provider>
         </entry>
@@ -80,20 +81,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="go-cli.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="go-cli.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/go-cli.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="130">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database" pinned="false" current-in-tab="false">
+      <file leaf-file-name="database" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/database">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+            <state relative-caret-position="320">
+              <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
             </state>
           </provider>
         </entry>
@@ -114,7 +115,13 @@
       <find>map</find>
       <find>end</find>
       <find>print</find>
+      <find>view</find>
       <find>write</find>
+      <find>writehis</find>
+      <find>anda</find>
+      <find>route</find>
+      <find>get_route</find>
+      <find>custimer</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -134,8 +141,8 @@
         <option value="$PROJECT_DIR$/util.rb" />
         <option value="$PROJECT_DIR$/customer.rb" />
         <option value="$PROJECT_DIR$/people.rb" />
-        <option value="$PROJECT_DIR$/map.rb" />
         <option value="$PROJECT_DIR$/go-cli.rb" />
+        <option value="$PROJECT_DIR$/map.rb" />
       </list>
     </option>
   </component>
@@ -302,9 +309,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="Ruby.go-cli" />
+        <item itemvalue="RSpec.#calculateCustomerAndDriver return distance between customer and driver: go-cli" />
         <item itemvalue="Ruby.map" />
         <item itemvalue="Ruby.util" />
-        <item itemvalue="RSpec.#calculateCustomerAndDriver return distance between customer and driver: go-cli" />
         <item itemvalue="RSpec.Run spec 'people_spec': go-cli" />
       </list>
     </recent_temporary>
@@ -323,14 +330,11 @@
       <workItem from="1529324536708" duration="504000" />
       <workItem from="1529392722774" duration="1627000" />
       <workItem from="1529395013102" duration="3521000" />
-      <workItem from="1529400181916" duration="20434000" />
+      <workItem from="1529400181916" duration="26110000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="People#calculateDistance_return_distance_between_2_object__go-cli - 2018.06.19 at 15h 55m 22s.xml">
-      <configuration name="People#calculateDistance return distance between 2 object: go-cli" configurationId="RSpecRunConfigurationType" />
-    </history-entry>
     <history-entry file="All_tests_in_go-cli__go-cli - 2018.06.19 at 15h 57m 13s.xml">
       <configuration name="All tests in go-cli: go-cli" configurationId="TestUnitRunConfigurationType" />
     </history-entry>
@@ -358,13 +362,15 @@
     <history-entry file="#calculateCustomerAndDriver_return_distance_between_customer_and_driver__go-cli - 2018.06.19 at 16h 44m 46s.xml">
       <configuration name="#calculateCustomerAndDriver return distance between customer and driver: go-cli" configurationId="RSpecRunConfigurationType" />
     </history-entry>
+    <history-entry file="#calculateCustomerAndDriver_return_distance_between_customer_and_driver__go-cli - 2018.06.21 at 00h 06m 14s.xml">
+      <configuration name="#calculateCustomerAndDriver return distance between customer and driver: go-cli" configurationId="RSpecRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26086000" />
+    <option name="totallyTimeSpent" value="31762000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" />
@@ -416,17 +422,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/people_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/database.db">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/driver.rb">
+    <entry file="file://$PROJECT_DIR$/util.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        <state relative-caret-position="20">
+          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -437,17 +439,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/util.rb">
+    <entry file="file://$PROJECT_DIR$/driver.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/map.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+        <state>
+          <caret column="24" selection-start-column="24" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -458,20 +453,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database.db">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database">
+    <entry file="file://$PROJECT_DIR$/people_spec.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="14" lean-forward="true" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+        <state relative-caret-position="137">
+          <caret line="19" column="64" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="117">
+          <caret line="52" column="50" lean-forward="true" selection-start-line="52" selection-start-column="50" selection-end-line="52" selection-end-column="50" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/go-cli.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        <state relative-caret-position="130">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="90" lean-forward="true" selection-start-line="90" selection-end-line="90" />
         </state>
       </provider>
     </entry>

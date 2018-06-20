@@ -22,3 +22,69 @@ Route :
 Showing route
 Price : Rp. 7600
 ==============
+
+==============
+Driver : kojek
+Start : 13, 14
+Destination : 1, 1
+Route : 
+Showing route
+Price : Rp. 5000
+==============
+
+
+==============
+Driver : micky
+Start : 1, 12
+Destination : 1, 1
+Route : 
+Showing route
+Price : Rp. 2200
+==============
+
+
+==============
+Driver : micky
+Start : 15, 15
+Destination : 1, 1
+Route : 
+Showing route
+Price : Rp. 5600
+==============
+
+
+==============
+Driver : bonbon
+Start : 7, 4
+Destination : 19, 19
+Route : 
+
+==============
+Driver : kojek
+Start : 19, 15
+Destination : 10, 10
+Route : 
+start at (19,15)
+go to (10,15)
+turn left
+go to (10,10)
+finish at (10,10)
+
+Price : Rp. 2800
+==============
+
+
+==============
+Driver : rahul
+Start : 13, 7
+Destination : 1, 1
+Route : 
+start at (13,7)
+go to (1,7)
+turn left
+go to (1,1)
+finish at (1,1)
+
+Price : Rp. 3600
+==============
+
