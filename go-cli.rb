@@ -1,10 +1,11 @@
 require_relative 'map'
 
 class GoCli
-  @prices = 200
+
 
   def initialize
     @map = Map.new
+    @price = 200
   end
 
   def main
@@ -21,6 +22,9 @@ class GoCli
           opt = gets.chomp.to_i
         when 2
           order_go_ride
+          puts "Please select other action"
+          print "Your choice [1..4] : "
+          opt = gets.chomp.to_i
         when 3
           view_history
         when 4
@@ -39,11 +43,28 @@ class GoCli
     end
 
     def order_go_ride
+      print "Enter your destination (separate with spaces) (rows,cols) : "
+      a = STDIN.gets.chomp.to_s
+      arr = a.split().map {|x| x[/\d+/]}.collect {|x| x.to_i}
+      totalPrice = @map.get_distance_from_customer(*arr[0..1])*@price
+      driver = @map.get_nearest_driver
 
+      puts "\n================","================\n"
+      puts "Driver Name: ", "#{driver.name}\n"
+      puts "Route : ", "Sebuah Rute\n"
+      puts "Price : ", "Rp #{@price*@map.get_distance_from_customer(*arr)}\n"
+      print "Confirm ? (y/n) : "
+      answer = gets.chomp.to_s
+      ride_user(*arr) if answer.match?(/[1y](?:es)?/i)
     end
 
     def view_history
 
+    end
+
+    def ride_user x,y
+      @map.move_customer(x,y)
+      puts "Anda sudah sampai tujuan"
     end
 end
 

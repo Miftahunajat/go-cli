@@ -12,7 +12,7 @@ class Map
     @customer = Customer.new(*visited)
     @occupied[visited] = @customer
     5.times do
-      visited = Util.getRandomCoordinate(@size)
+      visited = Util.getRandomCoordinate(@size) until !@occupied[visited]
       @drivers << (@occupied[visited] = Driver.new("Ali",*visited) if !@occupied[visited])
     end
   end
@@ -31,4 +31,20 @@ class Map
       puts""
     end
   end
+  
+  def get_distance_from_customer(x,y)
+    (@customer.x - x).abs + (@customer.y - y).abs
+  end
+
+  def get_nearest_driver
+    nearest_driver = @drivers.min_by {|driver| @customer.calculatePeopleDistance(driver)}
+    nearest_driver
+  end
+
+  def move_customer (x,y)
+    @occupied.delete(@customer.get_loc)
+    @customer.move(x,y)
+    @occupied[@customer.get_loc] = @customer
+  end
+  
 end
