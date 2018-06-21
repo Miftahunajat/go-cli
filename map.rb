@@ -4,19 +4,25 @@ require_relative 'driver'
 
 class Map
 
-  attr_accessor :customer
+  attr_accessor :customer, :size
 
-  def initialize
-    @size = 20
-    @drivers_name = ["ali", "kojek", "rahul", "micky", "bonbon", "peeman", "theo"]
-    @drivers = []
+  def initialize(drivers, n ,user_x, user_y)
+    @size = n
     @occupied = Hash.new
-    visited = Util.getRandomCoordinate(@size)
+    @drivers = []
+    if user_x == -1 && user_y == -1
+      visited = Util.getRandomCoordinate(@size)
+    else
+      visited = [user_x, user_y]
+    end
     @customer = Customer.new(*visited)
-    @occupied[visited] = @customer
-    5.times do |i|
-      visited = Util.getRandomCoordinate(@size) until !@occupied[visited]
-      @drivers << (@occupied[visited] = Driver.new(@drivers_name[i],*visited) if !@occupied[visited])
+    @occupied[[visited[1], visited[0]]] = @customer
+
+    drivers.each do |key, value|
+      visited = value
+      driver = Driver.new(key, *value)
+      @drivers << driver
+      @occupied[visited] = driver
     end
   end
 
@@ -47,14 +53,14 @@ class Map
   def move_customer (x,y)
     @occupied.delete(@customer.get_loc)
     @customer.move(x,y)
-    @occupied[@customer.get_loc] = @customer
+    @occupied[[y,x]] = @customer
   end
 
-  def get_route (finish, start = @customer.get_loc)
+  def get_route (finish, start = @customer.get_loc.reverse)
     route = ''
     route << "start at (#{start[0]},#{start[1]})\n"
-    if finish[0] != start[0]
-      route << "go to (#{finish[0]},#{start[1]})\n"
+    if finish[0] != start[0] && finish[1] != start[1]
+      route << "go to (#{start[0]},#{finish[1]})\n"
     elsif finish[1] != start[1]
     end
     (((finish[0] - start[0]) * (finish[1] - start[1])) > 0) ? route << "turn left\n" : route << "turn right\n" if start[0] != finish[0] && start[1] != finish[1]

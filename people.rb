@@ -12,7 +12,7 @@ class People
   end
 
   def get_loc
-    [@x, @y]
+    [@y, @x]
   end
 
   def calculatePeopleDistance(people)

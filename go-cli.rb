@@ -2,11 +2,8 @@ require_relative 'map'
 
 class GoCli
 
-  attr_accessor :price
-
-
-  def initialize
-    @map = Map.new
+  def initialize(drivers, n = 20, user_x = -1, user_y = -1)
+    @map = Map.new(drivers,n.to_i,user_x.to_i,user_y.to_i)
   end
 
   def main
@@ -20,22 +17,22 @@ class GoCli
           show_map
           puts "Please select other action"
           print "Your choice [1..4] : "
-          opt = gets.chomp.to_i
+          opt = STDIN.gets.chomp.to_i
         when 2
           order_go_ride
           puts "Please select other action"
           print "Your choice [1..4] : "
-          opt = gets.chomp.to_i
+          opt = STDIN.gets.chomp.to_i
         when 3
           view_history
           puts "Please select other action"
           print "Your choice [1..4] : "
-          opt = gets.chomp.to_i
+          opt = STDIN.gets.chomp.to_i
         when 4
 
         else
           print "Cannot understand your meaning", "Please select your choice [1..4] : "
-          opt = gets.chomp.to_i
+          opt = STDIN.gets.chomp.to_i
       end
     end
 
@@ -47,9 +44,17 @@ class GoCli
     end
 
     def order_go_ride
-      print "Enter your destination (separate with spaces) (rows cols) : "
+      print "Enter your destination (separate with spaces) (x y) : "
       a = STDIN.gets.chomp.to_s
       arr = a.split().map {|x| x[/\d+/]}.collect {|x| x.to_i}
+      if arr.size != 2
+        puts "Invalid parameter number."
+        return
+      elsif !arr.all? {|i| i < @map.size}
+        puts "Invalid location"
+        return
+      end
+      puts @map.size
       totalPrice = @map.get_distance_from_customer(*arr[0..1])*get_price
       driver = @map.get_nearest_driver
 
@@ -59,7 +64,7 @@ class GoCli
       puts @map.get_route(arr)
       puts "Price : ", "Rp #{totalPrice}\n"
       print "Confirm ? (y/n) : "
-      answer = gets.chomp.to_s
+      answer = STDIN.gets.chomp.to_s
       if answer.match?(/[1y](?:es)?/i)
         write_history(driver.name, @map.customer.get_loc,arr,totalPrice)
         ride_user(*arr)
@@ -71,7 +76,7 @@ class GoCli
       puts "Viewing history . . . . . . .\n\n\n"
       input = IO.read("database")
       puts input
-      put "\n\n"
+      puts "\n\n"
     end
 
     def ride_user x,y
@@ -99,14 +104,37 @@ class GoCli
     end
 end
 
+# Main Block
+drivers_name = ["ali", "kojek", "rahul", "micky", "bonbon", "peeman", "theo"]
 case ARGV.size
 when 0
-  client = GoCli.new
+
+  drivers = Hash.new
+  5.times do |i|
+    drivers[drivers_name[i]] = Util.getRandomCoordinate(20)
+  end
+  client = GoCli.new(drivers)
   client.main
 when 1
-  STDOUT.puts "Invalid file name"
+  file = IO.readlines(ARGV[0])
+  n = file[0].to_i
+  start_x , start_y = file[1].split(" ").collect {|x| x.to_i}
+  driver_count = file[2].to_i
+  drivers = Hash.new
+  driver_count.times do |i|
+    arr = file[3 + i].split(" ")
+
+    drivers[arr[0]] = [arr[1].to_i, arr[2].to_i]
+  end
+  client = GoCli.new(drivers,n,start_x, start_y)
+  client.main
 when 3
-  STDOUT.puts "Three Parameter Launch"
+  drivers = Hash.new
+  5.times do |i|
+    drivers[drivers_name[i]] = Util.getRandomCoordinate(20)
+  end
+  client = GoCli.new(drivers, *ARGV)
+  client.main
 else
   STDOUT.puts "Invalid Parameter Number"
 end
