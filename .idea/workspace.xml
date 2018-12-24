@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb6fda8c-2a9f-46ba-bbdc-6a703ae6c83f" name="Default" comment="init project">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database" beforeDir="false" afterPath="$PROJECT_DIR$/database" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go-cli.rb" beforeDir="false" afterPath="$PROJECT_DIR$/go-cli.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.rb" beforeDir="false" afterPath="$PROJECT_DIR$/map.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/people.rb" beforeDir="false" afterPath="$PROJECT_DIR$/people.rb" afterDir="false" />
-    </list>
+    <list default="true" id="cb6fda8c-2a9f-46ba-bbdc-6a703ae6c83f" name="Default" comment="init project" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +41,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="driver.rb" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/driver.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="customer.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/customer.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -74,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="go-cli.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="go-cli.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/go-cli.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="197">
@@ -85,14 +88,10 @@
       </file>
       <file leaf-file-name="database" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="input.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="input.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/input.txt">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -143,10 +142,10 @@
         <option value="$PROJECT_DIR$/go_cli.rb" />
         <option value="$PROJECT_DIR$/util.rb" />
         <option value="$PROJECT_DIR$/customer.rb" />
-        <option value="$PROJECT_DIR$/database" />
         <option value="$PROJECT_DIR$/people.rb" />
         <option value="$PROJECT_DIR$/map.rb" />
         <option value="$PROJECT_DIR$/go-cli.rb" />
+        <option value="$PROJECT_DIR$/database" />
       </list>
     </option>
   </component>
@@ -335,7 +334,7 @@
       <workItem from="1529392722774" duration="1627000" />
       <workItem from="1529395013102" duration="3521000" />
       <workItem from="1529400181916" duration="32790000" />
-      <workItem from="1529561316444" duration="9618000" />
+      <workItem from="1529561316444" duration="10387000" />
     </task>
     <servers />
   </component>
@@ -372,7 +371,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48060000" />
+    <option name="totallyTimeSpent" value="48829000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -384,9 +383,9 @@
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45238096" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45238096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32857144" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.97619045" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -497,16 +496,6 @@
     <entry file="file://$PROJECT_DIR$/classdiagram.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/input.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="148" lean-forward="true" selection-start-line="148" selection-end-line="148" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/util.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
@@ -514,24 +503,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/map.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/customer.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/driver.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -548,6 +523,26 @@
           <caret line="54" column="14" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="14" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/driver.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="16" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
